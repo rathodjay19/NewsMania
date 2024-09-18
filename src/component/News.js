@@ -91,7 +91,10 @@ export class News extends Component {
   render() {
     return (
         <div className="container">
-            <h1 className="text-center my-3">NewsMania- Read top {this.props.category} headLines</h1>
+            <br></br>
+            <br></br>
+            
+            <h1 className="text-center">NewsMania- Read Top {this.props.category} HeadLines</h1>
 
             {this.state.loading && <Spinner />}
             

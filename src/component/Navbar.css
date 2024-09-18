@@ -1,0 +1,72 @@
+/* Basic styling for navbar */
+.navbar {
+  font-family: Arial, sans-serif;
+}
+
+/* Handle the dropdown menus */
+.nav-item .dropdown-menu {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  display: none;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-dark .nav-link.dropdown-toggle::after {
+  content: " ▼";
+  font-size: 0.6rem;
+  margin-left: 0.25rem;
+}
+
+.dropdown-item:hover {
+  background-color: #ddd;
+}
+
+
+
+
+.dropdown {
+  width: 100px; /* Slightly wider to accommodate content */
+  margin-left: 15px; /* More space between dropdown and other elements */
+}
+.dropdown .MuiFormControl-root {
+  background-color: rgb(138, 147, 161); /* Dropdown background */
+  border-radius: 4px; /* Slightly rounded corners */
+  border: 1px solid #ced4da; /* Subtle border to define the dropdown */
+}
+.dropdown .MuiInputLabel-root {
+  color: #c5d8e8; /* Subtle label color */
+}
+
+.dropdown .MuiSelect-root {
+  color: #343a40; /* Dropdown text color */
+  padding: 10px; /* More padding for better touch-target */
+}
+
+.dropdown .MuiSelect-icon {
+  color: #343a40; /* Icon color matching text */
+}
+
+.dropdown .MuiMenu-paper {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the dropdown list */
+}

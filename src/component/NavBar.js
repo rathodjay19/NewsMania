@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-export class NavBar extends Component {
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import './Navbar.css';
+import Dropdown from './Dropdown';
+
+export class NavBar extends Component {  
   render() {
     return (
         <div>
@@ -28,9 +35,10 @@ export class NavBar extends Component {
       <li className="nav-item"> <Link className="nav-link" to="/science">Science</Link> </li> 
       <li className="nav-item"> <Link className="nav-link" to="/sports">Sports</Link> </li> 
       <li className="nav-item"> <Link className="nav-link" to="/technology">Technology</Link> </li> 
-              
-              
-               
+
+          <div className="dropdown">
+               <Dropdown  changeCountry={this.props.changeCountry} />
+          </div>
                 </ul>
                
             </div>
