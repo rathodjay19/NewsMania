@@ -13,7 +13,7 @@ render() {
               left: '90%',
               zIndex:'1'
             }} >{source}</span>
-                <img className="card-img-top" src={imageUrl} />
+          <img className="card-img-top" src={imageUrl} alt={ imageUrl} />
           <div className="card-body d-flex flex-column">
             
                 <h5 className="card-title">{title}
@@ -24,7 +24,7 @@ render() {
                     <p className="class-text">
               <small className="text=muted">By {author?author:"Unknown"} on {new Date(date).toGMTString()}</small>
                     </p>
-                    <a href={newsUrl} target="_blank" className="btn btn-sm btn-dark mt-auto">Click to see more</a>
+                    <a href={newsUrl}  className="btn btn-sm btn-dark mt-auto">Click to see more</a>
                 </div>
             </div>
       </div>

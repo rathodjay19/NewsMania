@@ -3,6 +3,8 @@
   import News from './component/News'
   import { BrowserRouter, Route, Routes } from "react-router-dom";
   import LoadingBar from 'react-top-loading-bar'
+import About from './component/About'
+import slides from './data/carouselData.json'  
 
   export class App extends Component {
     pageSize = 10;
@@ -37,6 +39,8 @@
               <NavBar changeCountry={this.changeCountry} />
               <Routes>
 
+              <Route exact path='/about' key="1" element={<About data={slides} />}/>
+              
             <Route path='/' element={<News setProgress={this.setProgress} apiKey={this.apiKey}  key = {`home-${this.state.country}`} pageSize={this.pageSize} country={this.state.country} category="general"/>} />
             <Route exact path='/business' element={<News setProgress={this.setProgress} apiKey={this.apiKey}   key = {`business-${this.state.country}`} pageSize={this.pageSize} country={this.state.country} category="business" />} />
             <Route exact path='/general' element={<News setProgress={this.setProgress} apiKey={this.apiKey}   key = {`general-${this.state.country}`} pageSize={this.pageSize} country={this.state.country} category="general"/>} />
