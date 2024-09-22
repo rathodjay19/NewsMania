@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./About.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-import { MdSettingsInputAntenna } from "react-icons/md";
+// import { MdSettingsInputAntenna } from "react-icons/md";
 
 const About = ({ data }) => {
 	const [slide, setSlide] = useState(0);
@@ -37,7 +37,7 @@ const About = ({ data }) => {
 					return (
 						<button
 							key={idx}
-							onClick={null}
+							onClick={()=>{setSlide(idx)}}
 							className={
 								slide === idx ? "indicator" : "indicator indicator-inactive"
 							}
